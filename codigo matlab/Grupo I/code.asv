@@ -12,7 +12,7 @@ maxerror = 0.001;
 
 n = ceil((sqrt((K * ((b - a)^3))/(24*maxerror))));
 deltaX = (b - a)/n;
-x = a+(deltaX/2):deltaX:b-(deltaX/2);
+x = a+deltaX:deltaX:b- ;
 x = x(:);
 y = f(x);
 y = y(:);

@@ -19,13 +19,7 @@ nTrapezios = [];
 erros = [];
 Ns = [];
 for b = double(xs)
-    if b == 0
-        results = [results 0];
-        erros = [erros 0];
-        Ns = [Ns 0];
-    else
         deltaX = b - a;
-        syms n
         n = ceil((sqrt((K * (deltaX^3))/(12*maxerror))));
         x = a:deltaX/n:b;
         x = x(:);
@@ -36,7 +30,6 @@ for b = double(xs)
         erroAbsolutoMenorQue = (K * (deltaX^3))/(12*(n^2));
         erros = [erros erroAbsolutoMenorQue];
         Ns = [Ns n];
-    end
 end
 Answer = array2table ([double(results); erros ;Ns], 'VariableNames', string(xs), ...
     'RowNames', {'g(x)', 'Erro Absoluto Menor Que', 'nº de trapézios'})
