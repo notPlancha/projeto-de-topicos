@@ -1,5 +1,11 @@
 clear;
-K = 0.9; %análise do gráfico de f''(x)
+% Análise da segunda derivada de f''(x) para determinar um K estável
+% X = 0:pi/100:2*pi;
+% Y = f(X);
+% dY = gradient(Y(:))./gradient(X(:));
+% dYY = gradient(dY(:))./gradient(X(:));
+% plot(X, dYY);
+K = 0.9;
 a = 0;
 maxerror = 0.001;
 xs = sym([]);
@@ -11,11 +17,11 @@ format long;
 results = [];
 nTrapezios = [];
 erros = [];
-Ns = []
+Ns = [];
 for b = double(xs)
     deltaX = b - a;
     syms n
-    n = sqrt((K * (deltaX^3))/(12*maxerror)) + 1;%+1 pq eu quero o int pra cima
+    n = (sqrt((K * (deltaX^3))/(12*maxerror))) + 1;%+1 pq eu quero o int pra cima
     deltaMid = deltaX /n;
     sumFs = f(a) + f(b);
     for i = 1:n-1 %-1 pq f(b) é o último
