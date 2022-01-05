@@ -1,5 +1,1 @@
-No grupo II, os x q estao na tabela são os pontos que calculamos os trapézios, ou é pra usar o método pra calcular todos em cada
-Se segunda, é suposto fazermos a soma da área nova com a aera antiga?
-ex: g(2pi/5) = g(pi-/5) + pi/5§2pi/5 arctan(sin(t))dt
-https://videoconf-colibri.zoom.us/j/83232442512
-04/01/2022 (terça-feira), às 10 H
+perguntar se é preciso descrição do que fizemos ou tabela e código é suficiente se tiver organizado

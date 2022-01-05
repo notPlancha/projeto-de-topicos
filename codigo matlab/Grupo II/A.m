@@ -24,6 +24,5 @@ function ret = A(xs, maxerror)
         erros = [erros erroAbsolutoMenorQue];
         Ns = [Ns n];
     end
-    ret = array2table ([double(results); erros ;Ns], 'VariableNames', string(xs), ...
-        'RowNames', {'g(x)', 'Erro Absoluto Menor Que', 'nº de trapézios'});
+    ret = [double(results); erros ;Ns];
 end
