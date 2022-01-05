@@ -1,0 +1,19 @@
+%Editor
+function s = IntMPM (f, a , b, n)
+
+    dx = (b-a)./n;
+    dx2 = dx./2;
+    x = a:dx:(b-dx);
+    s = dx .* sum(f(x+dx2));
+end
+----------------------------
+%Command
+x = sym('x')
+f=@(x)(1-(x.^2));
+a = 0;
+b = 1;
+n = 10
+resultado = IntMPM (f, a, b, n)
+
+%Notas
+resultado vai dar 0.6675 que é a resposta
