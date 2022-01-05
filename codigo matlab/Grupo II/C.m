@@ -1,5 +1,4 @@
 function ret = C(xs)
-    %se g(x) = 0§xf(t)dt, ent g'(x) = f(x) em [0, x]
     fxs = f(xs);
     dgdxExato = fxs;
     syms x
